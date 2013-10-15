@@ -84,32 +84,33 @@ cd Cassandra</code>
 	
 <p>2. Schema Creation:</p>
 
-<pre>-<code>
+<pre><code>
  create keyspace training_ks<br>
   with placement_strategy = 'SimpleStrategy' <br>
   and strategy_options = {replication_factor : 1}<br>
   and durable_writes = true;<br>
-</code>-</pre>
-<code>
-<p>create column family chat_conversation_comp</p>
- <p> with column_type = 'Standard'</p>
-<p>  and comparator = 'CompositeType(TimeUUIDType,UTF8Type)'</p>
-<p>  and default_validation_class = 'UTF8Type'</p>
-<p>  and key_validation_class = 'UTF8Type'</p>
-</code>
+</code></pre>
+<pre><code>
+create column family chat_conversation_comp<br>
+with column_type = 'Standard'<br>
+and comparator = 'CompositeType(TimeUUIDType,UTF8Type)'<br>
+and default_validation_class = 'UTF8Type'<br>
+and key_validation_class = 'UTF8Type'<br>
+</code></pre>
 
 <p>modify the config.properties with the IP address of appropriate Cassandra node</p>
 
 
 <code>NODE=localhost</code>
+<h3>Execution</h3>
 <p> go to a directory on the local machine and run following
-git clone https://github.com/ameet123/ConverseCass.git
+<code>git clone https://github.com/ameet123/ConverseCassandra.git</code>
 All the files required will be downloaded
-then cd into ConverseCass and simply run,
-ant
+then cd into ConverseCassandra and simply run,
+<code>ant</code>
 This will build ConverseCass.jar under bin/
 </p>
 <p> to run,
 Assuming that Cassandra instance is up
-java -jar bin/ConverseCass.jar
+<code>java -jar bin/ConverseCass.jar</code>
 </p>
