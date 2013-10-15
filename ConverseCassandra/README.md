@@ -99,45 +99,11 @@ cd Cassandra</code>
 
 <code>
 <p>create column family chat_conversation_comp</p>
-
-
  <p> with column_type = 'Standard'</p>
-
-
 <p>  and comparator = 'CompositeType(TimeUUIDType,UTF8Type)'</p>
-
-
 <p>  and default_validation_class = 'UTF8Type'</p>
-
-
 <p>  and key_validation_class = 'UTF8Type'</p>
-
-
-  ;</code>
-
-<p> 1. Install eclipse or some other IDE</p>
-
-
-<p>2. Install Egit plugin from </p>
-
-
-	http://download.eclipse.org/egit/updates 
-	
-	by going to Help=> Install new software
-	
-	Import project from Git:
-	
-	• File-> Import
-	
-	
-	From URI
-	
-	
-	URI: https://github.com/ameet123/ConverseCass.git
-	Local path => something on local filesystem
-
-
-
+</code>
 
 <p>modify the config.properties with the IP address of appropriate Cassandra node</p>
 
