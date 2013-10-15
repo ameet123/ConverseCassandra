@@ -85,10 +85,10 @@ cd Cassandra</code>
 <p>2. Schema Creation:</p>
 
 <pre>-<code>
-<p>create keyspace training_ks</p>
- <p> with placement_strategy = 'SimpleStrategy'</p>
- <p> and strategy_options = {replication_factor : 1}</p>
-<p>  and durable_writes = true;</p>
+ create keyspace training_ks<br>
+  with placement_strategy = 'SimpleStrategy' <br>
+  and strategy_options = {replication_factor : 1}<br>
+  and durable_writes = true;<br>
 </code>-</pre>
 <code>
 <p>create column family chat_conversation_comp</p>
