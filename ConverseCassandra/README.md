@@ -41,18 +41,16 @@ cd Cassandra
 <p>1. connect to cassandra-cli from the server</p>
 <code><cassandra-install>/bin/cassandra-cli connect localhost/9160</code>
 <p>2. Schema Creation:</p>
-<pre><code>
- create keyspace training_ks<br>
-  with placement_strategy = 'SimpleStrategy' <br>
-  and strategy_options = {replication_factor : 1}<br>
-  and durable_writes = true;<br>
+<pre><code>create keyspace training_ks
+  with placement_strategy = 'SimpleStrategy'
+  and strategy_options = {replication_factor : 1}
+  and durable_writes = true;
 </code></pre>
-<pre><code>
-create column family chat_conversation_comp<br>
-with column_type = 'Standard'<br>
-and comparator = 'CompositeType(TimeUUIDType,UTF8Type)'<br>
-and default_validation_class = 'UTF8Type'<br>
-and key_validation_class = 'UTF8Type'<br>
+<pre><code>create column family chat_conversation_comp
+with column_type = 'Standard'
+and comparator = 'CompositeType(TimeUUIDType,UTF8Type)'
+and default_validation_class = 'UTF8Type'
+and key_validation_class = 'UTF8Type'
 </code></pre>
 
 <p>modify the config.properties with the IP address of appropriate Cassandra node</p>
