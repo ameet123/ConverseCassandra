@@ -80,17 +80,16 @@ cd Cassandra</code>
 <p>1. connect to cassandra-cli from the server</p>
 
 
-<code><cassandra-install>/bin/cassandra-cli
- connect localhost/9160</code>
+<code><cassandra-install>/bin/cassandra-cli connect localhost/9160</code>
 	
 <p>2. Schema Creation:</p>
 
-
-<code><p>create keyspace training_ks</p>
+<pre>-<code>
+<p>create keyspace training_ks</p>
  <p> with placement_strategy = 'SimpleStrategy'</p>
  <p> and strategy_options = {replication_factor : 1}</p>
 <p>  and durable_writes = true;</p>
-</code>
+</code>-</pre>
 <code>
 <p>create column family chat_conversation_comp</p>
  <p> with column_type = 'Standard'</p>
