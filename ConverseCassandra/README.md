@@ -87,16 +87,10 @@ cd Cassandra</code>
 
 
 <code><p>create keyspace training_ks</p>
-
-
  <p> with placement_strategy = 'SimpleStrategy'</p>
-
-
  <p> and strategy_options = {replication_factor : 1}</p>
-<p>  and durable_writes = true;</code></p>
-
-
-
+<p>  and durable_writes = true;</p>
+</code>
 <code>
 <p>create column family chat_conversation_comp</p>
  <p> with column_type = 'Standard'</p>
