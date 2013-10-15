@@ -13,14 +13,11 @@ if not installed, follow the instructions here to install java first (note that 
 
 <p>2. Create a folder called “Cassandra”, and cd to it</p>
 
-<pre><code>
-mkdir Cassandra<br>
+<pre><code>mkdir Cassandra
 cd Cassandra
 </code></pre>
 
 <p>3. Download Cassandra from Datastax</p>
-
-
 <code>wget “http://downloads.datastax.com/community/dsc-cassandra-1.2.3-bin.tar.gz”</code>
 
 <p>4.	Untar dsc-cassandra-1.2.3-bin.tar.gz file</p>
@@ -33,9 +30,9 @@ cd Cassandra
 <p>b.      Modify "seed_provider":   "seeds": < comma separated IP addresses of 2 of the 5 machines </p>
 <p>c.        Modify "listen_address": <IP address of the machine> (can use command “if config” to get this information)</p>
 <p>d.       Modify "rpc_address":  0.0.0.0 </p>
-<p>10.   Run cassandra as $CASSANDRA_HOME/bin/cassandra -p <path to PID file></p>
+<p>10.   Run cassandra as <code>$CASSANDRA_HOME/bin/cassandra -p pid_file_name</code></p>
 <p>11.   Start it from the seed nodes first and then go to the other nodes </p>
-<p>12. Once all nodes have been started, run $CASSANDRA_HOME/bin/nodetool ring to check cluster status</p>
+<p>12. Once all nodes have been started, run <code>$CASSANDRA_HOME/bin/nodetool ring</code> to check cluster status</p>
 
 <em>Default partitioning in 1.2.3 is Murmur3 which uses tokens in the range of 2^64</em>
  
