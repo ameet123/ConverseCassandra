@@ -1,0 +1,11 @@
+create keyspace training_ks
+  with placement_strategy = 'SimpleStrategy'
+  and strategy_options = {replication_factor : 1}
+  and durable_writes = true;
+use training_ks;
+create column family chat_conversation_comp
+with column_type = 'Standard'
+and comparator = 'CompositeType(TimeUUIDType,UTF8Type)'
+and default_validation_class = 'UTF8Type'
+and key_validation_class = 'UTF8Type';
+
