@@ -26,6 +26,12 @@ you can check that by<br>
 <h2>Install CassandraConverse Application: </h2>
 </strong></p>
 
+
+
+<h3>Schema Creation</h3>
+schema for the project can be created as follows<br>
+<code>Cassandra/dsc-cassandra-1.2.3/bin/cassandra-cli -f createSchema.cli</code><br>
+
 <h3>Execution</h3>
 
 cd into ConverseCassandra and simply run,
@@ -35,10 +41,6 @@ This will build ConverseCass.jar under bin/
 Assuming that Cassandra instance is up, <br>
 <code>java -jar bin/ConverseCass.jar</code>
 </p>
-
-<h3>Schema Creation</h3>
-schema for the project can be created as follows<br>
-<code>Cassandra/dsc-cassandra-1.2.3/bin/cassandra-cli -f createSchema.cli</code><br>
 <br><br>
 The details of schema creation are as follows - 
 <br>
